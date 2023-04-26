@@ -1,0 +1,41 @@
+public class metodos {
+
+    public static void main(String[] args){
+        Coche coche = new Coche();
+        CocheChanger(coche);
+        CocheChanger(coche);
+
+        System.out.println(coche.velocidad);
+    }
+    public static void CocheChanger(Coche coche) {
+        coche.velocidad = coche.velocidad + 50;
+    }
+
+}
+
+interface Vehiculo {
+    void Acelerar (int cuantaVelocidad);
+    void Frenar (int CuantaVelocaidad);
+
+}
+
+class Coche implements Vehiculo {
+    int velocidad = 0;
+    public void Acelerar(int cuantaVelocidad) {
+        System.out.println("Coche() -> Acelerar()");
+    }
+
+    public void Frenar(int cuantaVelociadd)   {
+        System.out.println("Coche() -> Frenar()");
+    }
+}
+
+class Moto implements Vehiculo {
+    public void Acelerar(int cuantaVelocidad) {
+        System.out.println("Moto() -> Acelerar()");
+    }
+
+    public void Frenar(int cuantaVelociadd)   {
+        System.out.println("Moto() -> Frenar()");
+    }
+}
